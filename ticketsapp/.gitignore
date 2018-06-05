@@ -1,6 +1,4 @@
 .vscode/*
 *.pyc
-tests/*
 htmlcov
 .env
-.coverage
