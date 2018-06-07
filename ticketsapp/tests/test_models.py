@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 from tickets.models import Ticket, Category, generate_ticket_id
 
-class CategoryTest(TestCase):
+class CategoryModelTestCase(TestCase):
 
     def create_category(self, name='Python', slug='www.python.org'):
         return Category.objects.create(name=name, slug=slug)
@@ -14,7 +14,7 @@ class CategoryTest(TestCase):
         self.assertTrue(isinstance(w, Category))
 
 
-class TicketTest(TestCase):
+class TicketModelTestCase(TestCase):
     
     def create_category(self, name='Python', slug='www.python.org'):
         return Category.objects.create(name=name, slug=slug)
@@ -37,7 +37,7 @@ class TicketTest(TestCase):
         self.assertTrue(isinstance(ticket, Ticket))
 
 
-class GenerateIdTest(TestCase):
+class GenerateIdTestCase(TestCase):
     
     def test_generate_id(self):
         self.id = generate_ticket_id()
